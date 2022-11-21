@@ -1,0 +1,336 @@
+#landing{
+    background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+    background: url('images/banner1\ \(1\).jpeg');
+}
+@media only screen and (max-width: 968px) {
+  #landing{
+    height: 100%;
+  }  
+}
+
+.outer{
+    position: relative;
+    margin: 8px;
+
+}
+.outer h1{
+text-align: center;
+text-transform: capitalize;
+font-size: 12px;
+margin: 8px;
+padding: 8px;
+}
+.outer hr{
+    border: 1px thin #111;
+    width: 4%;
+    margin-left: 48%;
+    background: #222;
+
+}
+.flip-card{
+    background: transparent;
+    width: 269px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    margin: 8px;
+}
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner{
+transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flip-card-back h1{
+position: absolute;
+color: rgb(0, 0, 0);
+text-transform: capitalize;
+width: 100%;
+right: 3%;
+left: 0;
+top: 5%;
+font-size: 12px;
+
+}
+.flip-card-back a{
+position: inherit;
+bottom: 0;
+left: 0;
+color: #fff;
+text-transform: capitalize;
+padding: 10px;
+background: #111;
+width: 100%;
+transition: 0.8s;
+font-size: 14px;
+}
+.flip-card-back a:hover{
+    background: rgb(48, 47, 47);
+}
+.flip-card-back{
+    background-color: rgb(255, 255, 255);
+    color: #fff;
+    transform: rotateY(180deg);
+}
+.price{
+    color: #111;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    right: 0;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.details{
+    color: #111;
+    width: 100%;
+    right: 0;
+    position: absolute;
+    top: 59%;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 12px;
+}
+.flip-card-back i{
+    margin-left: 8px;
+}
+@media only screen and (max-width: 968px) {
+    .row{
+        display: block;
+       flex-wrap: wrap;
+     
+    }
+    #landing{
+        position: relative;
+        width: 100%;
+        height: 74vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .items{
+        display: flex;
+        position: relative;
+       
+    }
+}
+.items{
+    display: flex;
+    position: relative;
+flex-wrap: wrap;
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: space-evenly;
+ 
+}
+
+.col1{
+    position: relative;
+    width: 279px;
+    height: 279px;
+    background: #111;
+    transition: 0.7s;
+    margin: 10px;
+    border-radius: 8px;
+}
+.col1 img{
+  
+    width: 100%;
+    opacity: 0.6;
+    height: 100%;
+    transition: 0.7s;
+    border-radius: 8px;
+}
+.col1 h1{
+    position: absolute;
+    word-wrap: break-word;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+   text-align: center;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 8px;
+}
+.col1 img:hover, .col1:hover{
+width: 285px;
+}
+@media only screen and (max-width: 968px) {
+    
+}
+.benefits{
+    background: rgb(222, 222, 222);
+    position: relative;
+    height: auto;
+    text-align: center;
+
+}
+.benefits h1{
+    color: #111;
+    text-align: center;
+    margin: 6px;
+    padding: 10px;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.benefits h3{
+    text-align: center;
+    display: inline;
+    text-transform: capitalize;
+    margin-left: 10%;
+   
+}
+.next{
+    position: relative;
+    margin: 15px;
+    text-align: center;
+}
+.next a{
+    font-size: 14px;
+    transition: 0.8s;
+    margin: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.next a:hover{
+    text-decoration: underline;
+    color: #222;
+    font-style: italic;
+}
+#landing1{
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 65vh;
+    width: 100%;
+    background:  url('images/banner1\ \(2\).jpeg');
+} 
+
+/* this style belongs to the hoodies section*/
+#landing2{
+background-size: contain;
+    height: 75vh;
+    width: 100%;
+    background:  url('images/hoodies.png');
+} 
+
+#landing3{
+        height: 60vh;
+        width: 100%;
+        background-image:  url('images/banner33.jpg');
+    } 
+   
+    .active{
+        border: 1px dotted #111;
+        padding: 3px;
+        width: 20px;
+        border-radius: 2px;
+    }
+    @media only screen and (max-width: 968px){
+        #landing3{
+            background-position: center;
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/banner3.png');  
+        }
+        #landing1{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center; 
+        } 
+        #landing4{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        } 
+        #landing2{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center; 
+        }
+        #landing3{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;    
+        }
+    }
+    #landing4{
+        height: 60vh;
+        width: 100%;
+        background-image:  url('images/banner33.jpg');
+    } 
+   
+    #landing5{
+        height: 80vh;
+        width: 100%;
+        background-position: center;
+        background-image:  url('images/pants.jpg ');  
+    }
+    .prev-and-next{
+       margin: 10px;
+       padding: 10px;
+       display: flex;
+       justify-content: space-between;
+       transition: all 0.8s;
+       text-transform: capitalize;
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .bck{
+        font-size: 12px;
+        border: 1px solid;
+        padding: 7px;
+        margin-left: 4%;
+        transition: all ease-in-out 0.8s;
+    }
+    .next1{
+        font-size: 12px;
+        border: 1px solid;
+        padding: 7px;
+        margin-right: 4%; 
+        transition: all ease-in-out 0.8s;
+    }
+    .bck:hover, .next1:hover{
+        background: rgb(3, 192, 245);
+        border: none;
+        color: #fff;
+        border-radius: 4px;
+    }
+    
+    @media only screen and (max-width: 968px) {
+        #landing5{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .prev-and-next{
+            display: block;
+        }
+        .bck, .next1{
+            font-size: 10px;
+            display: block;
+            margin: 20px;
+            width: 50%;
+            margin-left: 25%;
+        }
+       
+    }

@@ -1,0 +1,179 @@
+#contact::before::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+    position: relative;
+   
+}
+#contact{
+    background-image: url('images/pexels-pixabay-247204.jpg');
+    width: 100%;
+    height: 50em;
+    background-position: calc(10% - 0em);
+    background-size: cover;
+}
+#contact h1{
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    font-size: 37px;
+    text-transform: uppercase;
+}
+#contact p{
+    position: absolute;
+    word-wrap: break-word;
+    top: 40%;
+    left: 20%;
+    right: 50%;
+    color: #fff;
+}
+form,.contact{
+    background-color: rgba(127, 255, 212, 0.421);
+    position: absolute;
+    width: 400px;
+   height: 400px;
+   float: right;
+   right: 14%;
+   top: 30%;
+   bottom: 0;
+   margin-top: 10%;
+   padding: 15px;
+   border-radius: 7px;
+}
+label{
+    width: 100%;
+    float: left;
+    margin-left: 73px;
+    right: 20%;
+    text-transform: capitalize;
+    color: #111;
+    padding: 7px;
+}
+input{
+    background: none;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    text-transform: capitalize;
+    color: #fff;
+    transition: all ease-in-out 0.8s;
+    margin-top: 7%;
+    outline: 0;
+}
+input::placeholder, textarea::placeholder{
+    color: #fff;
+    font-weight: lighter;
+}
+input:focus, textarea:focus{
+    color: #fff;
+}
+.content{
+position: relative;
+}
+textarea{
+    width: 100%;
+    height: 20%;
+    outline: 0;
+    border: 0;
+    padding: 7px;
+    margin-top: 5%;
+    background: none;
+    border-bottom: 1px solid #fff;
+}
+#submit{
+    top: 82%;
+    left: 17px;
+    color: red;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: 1000;
+    width: 30%;
+    transition: all ease-in 0.8s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#submit:hover{
+background: rgba(127, 255, 212, 0.421);
+color: #fff;
+}
+@media only screen and (max-width: 968px) {
+    #contact{
+        position: relative;
+        display: block;
+    }
+    #contact h1{
+        color: red;
+        top: 20%;
+        border-radius: 8px;
+        background-color: rgb(255, 255, 255);
+        padding: 5px;
+        font-size: 26px;
+        text-align: center;
+        left: 30%;
+    }
+    #contact p{
+        right: 10%;
+        left: 10%;
+        top: 27%;
+    }
+    form,.contact{
+        margin-top: 60%;
+        left: 8%;
+        right: 10%;
+    }
+}
+.icons{
+    position: relative;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 10px;
+}
+.contents{
+position: relative;
+margin: 6px;
+}
+.contents h2{
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+.contents p{
+    font-size: 13px;
+   margin-bottom: 7px;
+}
+.contents i{
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: red;
+}
+@media only screen and (max-width: 968px) {
+    .icons{
+        display: block;
+        margin-top: 10px;
+    } 
+}
+.mapouter{
+    position: absolute;
+    right: 20%;
+    left: 10%;
+}
+@media only screen and (max-width: 968px) {
+    .mapouter{
+        overflow: hidden;
+        max-width: 70vh;
+        max-height: 40vh;
+    }
+}
+
+.footer-col h2{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+    background: #111;
+    padding: 7px;
+}

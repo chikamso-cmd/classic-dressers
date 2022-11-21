@@ -1,0 +1,717 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background: #fff;
+    margin: 0;
+}
+#loader{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 160px;
+    height: 160px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid rgb(13, 176, 198);
+    border-bottom: 16px solid rgb(255, 1, 149);
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+.wait h1{
+    position: fixed;
+    top: 67%;
+    left: 46%;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+@-webkit-keyframes spin{
+    0%{-webkit-transform: rotate(0deg);}
+    100%{-webkit-transform: rotate(360deg); }
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.animate-bottom{
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 2s;
+}
+@-webkit-keyframes animate-bottom{
+    from{
+        bottom: -100px; opacity: 0;}
+        to{bottom: 0px; opacity: 1;}
+}
+@keyframes animate-bottom{
+    from{bottom: -100px; opacity: 0;}
+    to{bottom: 0px; opacity: 1;}
+}
+#mydiv{
+    display: none;
+    text-align: center;
+}
+#top{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+#welcome{
+    background: linear-gradient(rgba(37 164 177 / 40%), rgba(171, 7, 122, 0.589)), url('images/pexels-ylanite-koppens-934070.jpg');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#welcome h1{
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-size: 60px;
+    top: 45%;
+    left: 10%;
+    right: 10%;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+}
+#welcome h3{
+    color: #fff;
+    text-transform: capitalize;
+    position: absolute;
+    top: 54%;
+    font-weight: normal;
+    left: 35%;
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+@media only screen and (max-width: 968px) {
+    #welcome h3{
+        font-size: 20px;
+        left: 5em;
+        top: 15em;
+    }
+   
+}
+.hype{
+    font-size: 80px;
+    text-align: center;
+    text-transform: capitalize;
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 20%;
+    font-family: 'Times New Roman', Times, serif;   
+}
+button{
+    animation: wiggle 2s linear infinite;
+}
+@keyframes wiggle{
+    0%, 7%{
+        transform: rotateZ(0);
+    }
+    15%{
+        transform: rotateZ(-15deg);
+    }
+    20%{
+        transform: rotateZ(10deg);
+    }
+    25%{
+        transform: rotateZ(-10deg);
+    }
+    30%{transform: rotateZ(6deg);}
+    35%{transform: rotateZ(-4deg);}
+    40%{transform: rotateZ(0);}
+}
+button{
+    position: absolute;
+  left: 43%;
+  top: 64%;
+      height: 4em;
+    width: 16em;
+    padding: 10px;
+    background: #444;
+    background: linear-gradient(top, #555, #333);
+    border: none;
+    border-top: 3px solid rgb(13, 176, 198);
+    transform-origin: 50% 5em;
+    color: #fff;
+    border-radius: 0 0 0.2em 0.2em;
+}
+button a{
+    color: #fff;
+    text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+button i{
+    margin-left: 5px;
+}
+#welcome h2{
+    color: #fff;
+    position: absolute;
+    top: calc(61% - 2em);
+    left: calc(37% - 2em);
+}
+@media only screen and (max-width: 968px){
+   #welcome h1{
+    font-size: 23px;
+    text-transform: uppercase;
+    text-align: center;
+   }
+   .wait h1{
+    left: 34%;
+    top: 56%;
+   }
+   #loader{
+    width: 100px;
+    height: 100px;
+   }
+   #welcome h2{
+top: 50%;
+font-family: cursive;
+font-size: 12px;
+left: 27%;
+   }
+   button{
+    top: 57%;
+    left: 30%;
+   }
+}
+@media only screen and (max-width: 968px){
+    #top{
+        position: fixed;
+    } 
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background: #fff;
+    padding: 10px;
+}
+nav h1, a{
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    color: #111;
+}
+.close-btn{
+    display: none;
+}
+.menu{
+    display: none;
+}
+.navbar i{
+    margin-right: 6px;
+}
+.navbar{
+    position: relative;
+    float: right;
+    right: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.navbar h1{
+    display: none;
+}
+.navbar a{
+    text-decoration: none;
+    color: #111;
+    margin-left: 10px;
+    padding: 8px;
+    transition: 0.7s;
+    font-size: 12px;
+}
+.navbar a:hover{
+    border-bottom: 1px solid #111;
+    color: #ccc;
+}
+@media only screen and (max-width: 968px) {
+ #top{
+    position: fixed;
+    top: 0;
+    height: 0;
+ }
+    nav{
+    position: fixed;
+    padding: 26px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .navbar{
+    width: 100%;
+    background: rgb(0, 0, 0);
+    padding-top: 25px;
+    position: fixed;
+    transition: 2s;
+    float: left;
+    height: 0;/* set it with JavaScript */
+    overflow: hidden;
+    left: 0;
+    top: -24px;
+    z-index: 1;
+    display: block;
+}
+.navbar a{
+    display: block;
+    font-size: 19px;
+    text-align: center;
+    margin: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;  
+   
+}
+.navbar a:hover{
+    border: none;
+}
+.navlinks .close-btn{
+    float: right;
+    position: absolute;
+    right: 8%;
+    top: 0;
+    display: block;
+    padding: 15px;
+   font-size: 20px;
+   color: #fff;
+   text-decoration: none;
+}
+.close-btn:hover{
+font-size: 30px;
+}
+  .menu{
+    display: block;
+    float: right;
+    right: 20%;
+    position: fixed;
+    cursor: pointer;
+    font-size: 25px;
+    top: 20px;
+  }
+.navbar i{
+    float: left;
+    font-size: 19px;
+    transition: 0.6s;
+}
+.navbar h1{
+    display: block;
+    text-align: left;
+    margin-left: 20px;
+}
+}
+#landing{
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/images\ \(31\).jpeg');
+}
+#landing h1{
+position: absolute;
+float: left;
+left: 0;
+top: 34%;
+margin: 10px;
+padding: 10px;
+color: #fff;
+text-transform: capitalize;
+font-family: 'Times New Roman', Times, serif;
+font-weight: lighter;
+font-size: 70px;
+}
+#landing h2{
+    position: absolute;
+    float: left;
+    left: 8%;
+    top: 43%;
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-size: 70px;   
+}
+#landing h3{
+    position: absolute;
+    font-family: cursive;
+    color: #fff;
+    font-size: 13px;
+    top: 41%;
+    text-transform: capitalize;
+    left: 20%;
+}
+#landing a{
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    background: #111;
+    padding: 10px;
+    margin: 10px;
+    top: 42%;
+    font-size: 12px;
+    left: 17px;
+    transition: 0.6s;
+}
+#landing a:hover{
+font-size: 14px;
+background: linear-gradient(rgba(18, 221, 235, 0.5), rgba(50, 159, 141, 0.5));
+}
+#landing i{
+margin-left: 5px;
+}
+@media only screen and (max-width: 968px) {
+ #landing{
+position: relative;
+height: 100vh;
+ } 
+
+ #landing h1{
+font-size: 20mm;
+position: inherit;
+top: 40%;
+ }
+ #landing h2{
+    font-size: 20mm;
+    left: 22%;
+    top: 51%;
+ }
+ #landing h3{
+display: none;
+ }
+ #landing a{
+    top: 45ex;
+    font-family: cursive;
+ }
+ #landing a:hover{
+    font-size: 12px;
+    background: linear-gradient(rgba(18, 221, 235, 0.5), rgba(50, 159, 141, 0.5));
+ }
+}
+.content{
+    position: relative;
+    margin: 5px;
+    padding: 10px;
+}
+.content h1{
+    text-align: center;
+    position: relative;
+    font-size: 13px;
+}
+.content hr{
+    width: 2%;
+position: absolute;
+left: 49%;
+top: 9mm;
+background-color: black;
+border-color: black;
+}
+/* collection grid for all items in the store*/
+.collection{
+    position: relative;
+    width: 100%;
+    
+   
+}
+.row{
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+}
+.col{
+    position: relative;
+    width: 279px;
+    height: 279px;
+    background: #111;
+    transition: 0.7s;
+    margin: 10px;
+    border-radius: 8px;
+}
+.col img{
+    object-fit: cover;
+    width: 100%;
+    opacity: 0.6;
+    height: 100%;
+    transition: 0.7s;
+    border-radius: 8px;
+}
+.col h1{
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+.col img:hover, .col:hover{
+width: 285px;
+}
+.more{
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+}
+.more h1{
+    color: #111;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 23px;
+    padding: 10px;
+    margin: 10px;
+}
+.more hr{
+    width: 5%;
+    position: absolute;
+    left: 46%;
+    background: #111;
+    border-color: #111;
+}
+@media only screen and (max-width: 968px) {
+    .content h1{
+        font-size: 20px;
+    }
+    .content hr{
+        width: 6%;
+        top: 79%;
+    }
+    .row{
+        display: flexbox;
+    }
+    .col{
+        position: relative;
+        width: 200px;
+    }
+    .col img{
+        width: 100%;
+        display: block;
+    }
+    .col img:hover, .col:hover{
+        width: 210px;
+        }
+}
+.newsletter{
+    background-color: #ccc;
+    position: relative;
+    margin-top: 5%;
+    padding: 10px;
+    height: 29vh
+}
+.newsletter h1{
+text-align: center;
+text-transform: uppercase;
+color: #111;
+font-weight: 1000;
+}
+.newsletter p{
+    text-align: center;
+    text-transform: capitalize;
+    padding: 5px;
+    color: #111;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+form{
+    position: relative;
+    padding: 10px;
+    margin: 10px;
+}
+label{
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    position:relative;
+    width: 30%;
+    border-radius: 4px;
+    margin-left: 22%;
+}
+input{
+    width: 40%;
+    padding: 7px;
+    margin: 6px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+input::placeholder{
+    color: #111;
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.subscribe{
+    animation: wiggle 2s linear infinite;
+}
+@keyframes wiggle{
+    0%, 7%{
+        transform: rotateZ(0);
+    }
+    15%{
+        transform: rotateZ(-15deg);
+    }
+    20%{
+        transform: rotateZ(10deg);
+    }
+    25%{
+        transform: rotateZ(-10deg);
+    }
+    30%{transform: rotateZ(6deg);}
+    35%{transform: rotateZ(-4deg);}
+    40%{transform: rotateZ(0);}
+}
+.subscribe{
+    position: absolute;
+  left: 65%;
+  top:9%;
+    height: 4em;
+    width: 16em;
+    padding: 10px;
+    background: #444;
+    font-size: 12px;
+    background: linear-gradient(top, #555, #333);
+    border: none;
+    text-transform: uppercase;
+    transform-origin: 50% 5em;
+    color: #fff;
+    border-radius: 0 0 0.9em 0.9em;
+}
+@media only screen and (max-width: 968px) {
+    .newsletter{
+        height: auto;
+      width: 100%;
+      padding: 10px;
+    }
+    .newsletter h1{
+        font-size: 15px;
+    }
+    .label{
+        width: 25%;
+        position: absolute;
+    }
+    input{
+        width: 30%;
+        position: relative;
+    }
+}
+footer{
+    position: relative;
+    margin: 10px;
+}
+footer .row{
+    display: flex;
+    position: relative;
+    left: 0;
+    justify-content: space-between;
+}
+.bottom{
+position: relative;
+padding: 10px;
+}
+.bottom hr{
+border: 1px thin #111;
+background: #111;
+}
+.footer-col{
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+}
+.footer-col a{
+    text-decoration: none;
+    color: #111;
+    display: block;
+    font-size: 14px;
+    text-transform: capitalize;
+    transition: 0.7s;
+   margin: 5px;
+   text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.footer-col i{
+    margin-right: 9px;
+}
+.footer-col a:hover{
+    color: rgb(81, 78, 78);
+    text-decoration: underline;
+    font-style: italic;
+}
+.footer-col h2{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+    background: #111;
+    padding: 7px;
+}
+@media only screen and (max-width: 968px) {
+  footer .row{
+display: flex;
+    }
+    .footer-col{
+        text-align: center;
+        position: relative;
+      text-align: center;
+    }
+}
+.categories{
+    position: relative;
+   margin: 15px;
+}
+.categories h1{
+    text-align: center;
+    padding: 6px;
+    margin: 10px;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    background: #111;
+    width: 50%;
+    margin-left: 24%;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.categories-col{
+    margin: 10px;
+    padding: 10px;
+}
+.categories-col h3{
+    text-transform: uppercase;
+    text-decoration: underline wavy;
+    text-align: center;
+}
+.categories-col a{
+    display: block;
+    margin: 9px;
+    color: #111;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.7s;
+    text-align: center;
+}
+.categories-col a:hover{
+    text-decoration: underline;
+    font-style: italic;
+}
+@media only screen and (max-width: 968px){
+    .categories h1{
+        font-size: 17px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: lighter;
+        padding: 15px;
+    }
+}
